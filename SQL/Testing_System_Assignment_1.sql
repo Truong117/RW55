@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS TestingSystem;
-CREATE DATABASE TestingSystem;
-USE TestingSystem;
+DROP DATABASE IF EXISTS Testing_System_Assignment_1;
+CREATE DATABASE Testing_System_Assignment_1;
+USE Testing_System_Assignment_1;
 
 CREATE TABLE Department(
 	department_ID		INT PRIMARY KEY AUTO_INCREMENT,
@@ -15,7 +15,7 @@ VALUES	('Maketting'),
         ('Tài chính'),
         ('Giám đốc'),
         ('Thư kí'),
-        ('NO person'),
+        ('No person'),
         ('Bán hàng');
        
 
@@ -153,8 +153,6 @@ VALUES 	('Câu hỏi về Java' , 1 ,'1' , '2' ,'2022-08-05'),
 		('Hỏi về Python' , 7 ,'1' , '10' ,'2022-08-05');
 
 
-
-
 CREATE TABLE Answer(
 	answer_ID		INT PRIMARY KEY AUTO_INCREMENT,
     content			VARCHAR(200) NOT NULL,
@@ -188,7 +186,7 @@ CREATE TABLE Exam (
 );
 
 INSERT INTO Exam (`code` , title , category_ID, duration , creator_ID , create_date )
-VALUES 	('VTIQ001' , 'Đề thi C#' ,1 , 60 , '5' , '2022-08-06 13:54:46'),
+VALUES 	('VTIQ001' , 'Đề thi C#' ,1 , 60 , '5' , '2016-08-06 13:54:46'),
 		('VTIQ002' , 'Đề thi PHP' ,10 , 60 , '2' , '2022-08-06 12:54:46'),
 		('VTIQ003' , 'Đề thi C++' , 9 ,120 , '2' , '2022-08-06 15:54:46'),
 		('VTIQ004' , 'Đề thi Java' , 6 , 60, '3' , '2022-08-06 14:54:46'),
