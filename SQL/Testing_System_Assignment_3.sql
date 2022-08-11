@@ -1,33 +1,33 @@
 USE Testing_System_Assignment_1;
--- Exercise 1
 
--- lấy ra tất cả các phòng ban 
+-- Câu 1: Đã thêm trong assingment 1
+-- Câu 2: lấy ra tất cả các phòng ban 
 SELECT department_name
 FROM Department;
 
--- lấy ra id của phòng ban "Sale"
+-- Câu 3: lấy ra id của phòng ban "Sale"
 SELECT department_ID
 FROM Department
 WHERE department_name = 'sale';
 
--- lấy ra thông tin account có full name dài nhất
+-- Câu 4: lấy ra thông tin account có full name dài nhất
 SELECT * FROM `account`
-WHERE LENGTH(full_name) = (SELECT MAX(LENGTH(full_name) FROM `account` )
+WHERE LENGTH(full_name) = (SELECT MAX(LENGTH(full_name)) FROM `account` )
 ORDER BY account_ID;
 
--- Lấy ra thông tin account có full name dài nhất và thuộc phòng ban có id =3
+-- Câu 5: Lấy ra thông tin account có full name dài nhất và thuộc phòng ban có id =3
 WITH CTE_DEP3 AS (SELECT * FROM `Account` WHERE department_ID = 3)
 SELECT * FROM `CTE_DEP3`
 WHERE LENGTH(full_name) = (SELECT MAX(LENGTH(full_name)) FROM `CTE_DEP3`)
 ORDER BY full_name;
 
 
--- Lấy ra tên group đã tham gia trước ngày 20/12/2019
+-- Câu 6: Lấy ra tên group đã tham gia trước ngày 20/12/2019
 SELECT group_name
 FROM `group`
 WHERE create_date > '2019-12-20' ;
 
--- Lấy ra ID của question có >= 4 câu trả lời
+-- Câu 7: Lấy ra ID của question có >= 4 câu trả lời
 
 SELECT A.question_ID
 FROM `Answer` A
